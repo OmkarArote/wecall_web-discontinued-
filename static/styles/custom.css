@@ -1,0 +1,79 @@
+canvas {
+	display: block;
+	vertical-align: bottom;
+}
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+.content-wrapper{
+	margin-top: 56px;
+}
+.dark-mode .info-box {
+    background-color: #5c67733b;
+    backdrop-filter: blur(3px);
+}
+[class*=sidebar-dark-]{
+	background-color: #1d2c46;
+}
+.layout-navbar-fixed .wrapper .sidebar-dark-primary .brand-link:not([class*=navbar]) {
+    background-color: #1d2c46;
+}
+.dark-mode .navbar-dark {
+    background-color: #1d2c46;
+    border-color: #1d2c46;
+}
+.dark-mode .content-wrapper {
+    color: #fff;
+    background: linear-gradient(90deg,#335171,#1a2d50);
+}
+.dark-mode .main-footer {
+    background-color: #1d2c46;
+    border-color: #1d2c46;
+}
+.dark-mode .callout.callout-danger {
+    border-left-color: #19344f;
+}
+.dark-mode .custom-control-label::before, .dark-mode .custom-file-label, .dark-mode .custom-file-label::after, .dark-mode .custom-select, .dark-mode .form-control:not(.form-control-navbar):not(.form-control-sidebar), .dark-mode .input-group-text {
+    background-color: #0c27436e;
+    color: #fff;
+}
+.dark-mode .custom-file-label, .dark-mode .custom-file-label::after, .dark-mode .form-control:not(.form-control-navbar):not(.form-control-sidebar):not(.is-invalid):not(:focus) {
+    border-color: #0c27436e;
+}
+.dark-mode .btn-primary {
+    color: #fff;
+    background-color: #027bfb;
+    border-color: #027bfb;
+    box-shadow: none;
+}
+.dark-mode .callout {
+    background-color: #263e5a;
+}
+.dark-mode {
+    background: linear-gradient(90deg,#59728a,#1e2f5a);
+    color: #fff;
+}
+.dark-mode .bg-danger {
+    background: #1f417d !important;
+}
+[class*=sidebar-dark] .btn-sidebar, [class*=sidebar-dark] .form-control-sidebar {
+    background-color: #2e4a6b;
+    border: 1px solid #233851;
+    color: #fff;
+}
+.dark-mode .modal-footer, .dark-mode .modal-header {
+    border-color: #1d2c46;
+}
+.dark-mode .modal-content {
+    background-color: #263e5a;
+}
+.dark-mode .select2-selection--single {
+    background-color: #0c27436e;
+    border-color: #0c274314;
+}

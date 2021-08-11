@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>List Organization</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <section class="container">
+			<div class="card callout callout-danger"> 
+				<div class="card-body">
+					<table id="example2" class="table table-bordered table-hover">
+					  <thead>
+						  <tr>
+							<th>Product Name</th>
+							<th>Product Type</th>
+							<th>Brand</th>
+							<th>Category</th>
+							<th>Speciality</th>
+							<th>UOM Type</th>
+                            <th>UOM Type</th>
+                            <th>UOM</th>
+                            <th>Refrence Key</th>
+                            <th>Division</th>
+                            <th>Product Status Active</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+						  </tr>
+					  </thead>
+					  <tbody>
+						  <tr>
+							<td>Shield</td>
+							<td>APCOD MAX</td>
+							<td>SALES</td>
+							<td>APCOD</td>
+                            <td>SACHET</td>
+                            <td>GYNAECOLOGIST</td>
+                            <td>Grams</td>
+                            <td>5</td>
+                            <td>G-APM</td>
+                            <td>Genesia</td>
+                            <td><input checked type="checkbox"></td>
+							<th><a href="/edit_pro" class="btn btn-primary"><i class="fas fa-edit"></i></a></th>
+							<th><a href="/add_pro" class="btn btn-danger"><i class="fas fa-trash"></i></a></th>
+						  </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+        </section>
+    </section>
+</div>
+{% endblock %}

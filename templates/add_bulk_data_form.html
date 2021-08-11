@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Bulk data upload page</h1>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <section class="container">
+            <form>
+                <section class="row">
+                    <div class="col-md-12">
+                        <div class="card callout callout-danger">
+                            <div class="card-header">
+                                <h3 class="card-title">Bulk data upload page</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">                                   
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Select bulk upload data of Medical Sales Representatives</label>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                    <label class="custom-file-label" for="exampleInputFile">Select the file...</label>
+                                                </div>
+                                                <div style="flex-direction: row;padding-left: 3px;">
+                                                    <a href="/download_msr" class="btn btn-success" title= "Download the Medical Sales Representatives template"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                                <div class="row">                                   
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="exampleInputFile">Select bulk upload data of Customers (Physicians)</label>
+                                            <div class="input-group">
+                                                <div class="custom-file">
+                                                    <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                    <label class="custom-file-label" for="exampleInputFile">Select the file...</label>
+                                                </div>
+                                                <div style="flex-direction: row;padding-left: 3px;">
+                                                    <a href="/download_dr" class="btn btn-success" title= "Download the Customers (Physicians) template"><i class="fa fa-download" aria-hidden="true"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-offset-4 col-sm-4">
+                                        <button type="button" class="btn btn-primary">Validate Linkage</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group row justify-content-center">
+                                <div class="col-sm-offset-4 col-sm-4">
+                                    <button type="button" class="btn btn-primary btn-block">Upload</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </form>
+        </section>
+    </section>
+</div>
+  {% endblock %}

@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>List Admin</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <section class="container">
+			<div class="card callout callout-danger"> 
+				<div class="card-body">
+					<table id="example2" class="table table-bordered table-hover">
+					  <thead>
+						  <tr>
+							<th>Organization</th>
+							<th>Division</th>
+							<th>Name</th>
+							<th>Email Address</th>
+							<th>View</th>
+							<th>Edit</th>
+							<th>Delete</th>
+						  </tr>
+					  </thead>
+					  <tbody>
+						  <tr>
+							<td>Shield</td>
+							<td>Evacare</td>
+							<td>ABC</td>
+							<td>abc@gmail.com</td>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-eye"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-edit"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-danger"><i class="fas fa-trash"></i></a></th>
+						  </tr>
+						  <tr>
+							<td>Shield</td>
+							<td>Nutri</td>
+							<td>def</td>
+							<td>def@gmail.com</td>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-eye"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-edit"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-danger"><i class="fas fa-trash"></i></a></th>
+						  </tr>
+						  <tr>
+							<td>Shield</td>
+							<td>Genecia</td>
+							<td>def</td>
+							<td>def@gmail.com</td>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-eye"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-primary"><i class="fas fa-edit"></i></a></th>
+							<th><a href="/edit_admin" class="btn btn-danger"><i class="fas fa-trash"></i></a></th>
+						  </tr>
+					  </tbody>
+					</table>
+				</div>
+			</div>
+        </section>
+    </section>
+</div>
+  {% endblock %}

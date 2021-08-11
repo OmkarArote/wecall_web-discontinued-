@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Edit Consultant</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <section class="container">
+            <form>
+                <div class="card callout callout-danger">
+                    <div class="card-header">
+                        <h3 class="card-title">Dr Details</h3>
+                    </div> 
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="consultant_name">Name(As per registration)</label>
+                                    <input type="text" class="form-control" placeholder="Name(As per registration)" id="consultant_name" name="consultant_name">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="speciality">Speciality</label>
+                                    <input type="text" class="form-control" placeholder="Speciality" id="speciality" name="speciality">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="dob">Date Of Birth</label>
+                                    <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Enter date" data-target="#reservationdate"  id="dob" name="dob"/>
+                                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                            <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="mdlno">MDL Number</label>
+                                    <input type="text" class="form-control" placeholder="MDL Number" id="mdlno" name="mdlno">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="qualification">Qualification</label>
+                                    <input type="text" class="form-control" placeholder="Qualification" id="qualification" name="qualification">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="email">Email ID</label>
+                                    <input type="email" class="form-control" placeholder="Email ID" id="email" name="email">
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <select class="form-control" id="city" name="city">
+                                        <option style="display:none;">Select Type</option>
+                                        <option>Mumbai</option>
+                                        <option>Hyderabad</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="form-group">
+                                    <label for="mobileno">Mobile No.</label>
+                                    <input type="text" class="form-control" placeholder="Mobile No." id="mobileno" name="mobileno">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <label for="password">Set Password</label>
+                                    <input type="text" class="form-control" placeholder="Set Password" id="password" name="password">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row justify-content-center">    
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary" style="margin-right: 5px;">Save</button>
+                        <a type="submit" class="btn btn-danger" href="{{ url_for('add_single_data_form') }}">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </section>
+</div>
+  {% endblock %}

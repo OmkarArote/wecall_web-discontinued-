@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block content %}
+	<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Single record update</h1>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <section class="container">
+            <div class="card callout callout-danger">
+                <div class="card-header">
+                    <h3 class="card-title">Single record update</h3>
+                </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+                <form class="form-horizontal">
+                    <div class="card-body">
+                        <div class="form-group">   
+                            <label for="exampleInputFile">Look up from Medical Sales Representatives data (Emp Number)</label>
+                            <div class="input-group input-group-md col-md-12">
+                                <input type="text" class="form-control" placeholder="Enter Emp No.">
+                                <span class="input-group-append">
+                                    <button type="button" class="btn btn-primary">Search</button>
+                                </span>
+                                <div class="btns" style="flex-direction: row;padding-left: 3px;">
+                                    <a type="button" class="btn btn-primary " href="/edit_msr">Edit & Save</a>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-lg">
+                                      Disable
+                                    </button>
+                                </div> 
+                            </div> 
+                                                             
+                        </div>
+                        <div class="form-group">   
+                            <label for="exampleInputFile">Look up from Customer data (MDL no.)</label>
+                            <div class="input-group input-group-md col-md-12">
+                                <input type="text" class="form-control" placeholder="Enter MDL No.">
+                                <span class="input-group-append">
+                                    <button type="button" class="btn btn-primary">Search</button>
+                                </span>
+                                <div class="btns" style="flex-direction: row;padding-left: 3px;">
+                                    <a type="button" class="btn btn-primary " href="/edit_dr">Edit & Save</a>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-lg">Disable</button> 
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button type="button" class="btn btn-primary">Validate Linkage</button>
+                            </div>
+                        </div>
+                        <div class="form-group row justify-content-center">
+                            <div class="col-sm-offset-4 col-sm-4">
+                                <button type="button" class="btn btn-primary btn-block">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+    <div class="modal fade" id="modal-lg">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title">Disable Confirmation</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Are you sure you want to disable?</p>
+            </div>
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-danger">Confirm</button>
+              <button type="button" class="btn btn-primary">Cancel</button>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+</div>
+  {% endblock %}
