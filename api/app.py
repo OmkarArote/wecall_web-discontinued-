@@ -217,3 +217,5 @@ api.add_resource(v_token, '/token/')
 
 if __name__ == '__main__':
     app.run(debug = True, port="2000")
+    # pip install pyopenssl
+    # app.run(debug = True, port="2000", ssl_context='adhoc')
