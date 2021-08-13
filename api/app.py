@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_file
 from flask_orator import Orator
 from flask_restful import Resource, Api, reqparse
 from urllib.request import urlopen
@@ -9,6 +9,8 @@ import simplejson
 import json
 import csv
 import sys
+import os
+from os.path import join, dirname, realpath
 
 app = Flask(__name__)
 app.config['ORATOR_DATABASES'] = {
@@ -193,6 +195,33 @@ class SalesRepUpsert(Resource):
         except Exception as e:
             return {'status': '500', 'message': str(e)}
 
+UPLOAD_FOLDER = 'static/files/'
+app.config['UPLOAD_FOLDER'] =  UPLOAD_FOLDER
+
+# @app.route('/add_bulk_data_form/', methods = ['POST'])
+class CsvDocUpsert(Resource):
+    def post(self):
+        # get the uploaded file
+        uploaded_file = request.files["file"]
+        if uploaded_file.filename != '':
+            file_path = os.path.join(app.config['UPLOAD_FOLDER'], uploaded_file.filename)
+            # set the file path
+            uploaded_file.save(file_path)
+            return json_gen(file_path)
+
+def json_gen(file_path):
+    with open(file_path,"r",encoding='utf-8') as f:
+        reader = csv.reader(f)
+        next(reader)
+        data = {"doc_data":[]}
+        for row in reader:
+            data["doc_data"].append({"doc_email_address":row[0],"doc_dob":row[1],"doc_mobile_no":row[2],"doc_speciality":row[3],"doc_full_name":row[4],"doc_mdl_no":row[5],"doc_qualification":row[6],"doc_hq":row[7],"doc_status":row[8]})
+        for i in data["doc_data"]:
+            apiUrl = "http://127.0.0.1:2000/adddoctor"
+            headers = {'Content-Type': 'application/json'}
+            r = requests.post(url=apiUrl, headers=headers, data = json.dumps(i))
+        return {'status': '200', 'message': 'Data Uploded Succesfully'}
+
 @app.route('/')
 def index():
     return('infocision.in')
@@ -213,6 +242,7 @@ api.add_resource(DoctorFetch, '/doctor/<int:doc_id>')
 api.add_resource(UserLoginUpsert, '/adduser')
 api.add_resource(DoctorUpsert, '/adddoctor')
 api.add_resource(SalesRepUpsert, '/addsalesrep')
+api.add_resource(CsvDocUpsert, '/add_bulk_data_form')
 api.add_resource(v_token, '/token/')
 
 if __name__ == '__main__':
